@@ -1,17 +1,88 @@
-🛒 Gerenciador de Produtos em Java (com Exportação CSV)Aplicação console desenvolvida em Java para cadastro, gerenciamento e exportação de produtos. O projeto foi construído para demonstrar conceitos fundamentais de Orientação a Objetos (POO), manipulação de coleções em memória e gravação de arquivos CSV para integração com planilhas como Excel e Google Sheets.📌 FuncionalidadesCadastrar Produtos: Permite registrar produtos com nome, preço, marca e disponibilidade em estoque.Listar Produtos: Exibe todos os itens cadastrados formatados no console.Exportar para CSV: Gera um arquivo .csv utilizando ; como separador, garantindo compatibilidade com o Excel em formato numérico brasileiro.Menu Interativo: Interface simples no terminal baseada na classe Scanner.🛠️ Tecnologias UtilizadasLinguagem: Java (JDK 17 ou superior)Paradigma: Programação Orientada a Objetos (POO)Manipulação de Arquivos: java.io.BufferedWriter / java.io.FileWriterEstrutura de Dados: java.util.List / java.util.ArrayList📁 Estrutura do Projetogerenciador-produtos/
+# 📦 Gerenciador de Produtos em Java
+
+Projeto desenvolvido em **Java** com o objetivo de cadastrar, listar, **remover** e exportar informações de produtos para um arquivo no formato **CSV** (compatível com Excel e Google Planilhas).
+
+Este projeto faz parte do meu portfólio de estudos e demonstra a aplicação prática dos conceitos fundamentais de Programação Orientada a Objetos (POO) e manipulação de arquivos (`java.io`).
+
+---
+
+## 🚀 Funcionalidades
+
+- **Cadastrar Produto:** Permite inserir nome, preço, marca e disponibilidade em estoque (Sim/Não).
+- **Listar Produtos:** Exibe todos os produtos cadastrados na memória com seus respectivos índices.
+- **Remover Produto:** Permite excluir um produto da lista informando o seu número correspondente.
+- **Exportar para CSV:** Gera automaticamente o arquivo `produtos.csv` formatado para abertura em planilhas (usando `;` como separador).
+
+---
+
+## 🛠️ Tecnologias e Conceitos Utilizados
+
+- **Linguagem:** Java (JDK 17+)
+- **Orientação a Objetos:** Encapsulamento, Abstração e Sobrescrita de Métodos (`toString`).
+- **Coleções:** `ArrayList` para manipulação dinâmica de dados em memória.
+- **Manipulação de Arquivos:** `FileWriter` e `BufferedWriter` para persistência dos dados em disco.
+- **Entrada de Dados:** `Scanner` para interação via terminal.
+
+---
+
+## 📁 Estrutura do Projeto
+
+```text
+gerenciador-produtos/
 ├── src/
 │   ├── model/
-│   │   └── Produto.java             # Entidade que representa o produto
+│   │   └── Produto.java             # Classe modelo do produto
 │   ├── service/
-│   │   └── GerenciadorProdutos.java # Regra de negócio e exportação I/O
-│   └── Main.java                    # Ponto de entrada e menu console
-├── produtos.csv                     # Arquivo gerado após exportação
-└── README.md                        # Documentação do repositório
-🚀 Como Executar o ProjetoPré-requisitosJava JDK 17 ou superior instalado.Terminal/Prompt de Comando ou uma IDE de sua preferência (VS Code, Eclipse, IntelliJ).Passo a Passo (Terminal)Clone o repositório:git clone https://github.com/seu-usuario/gerenciador-produtos-java.git
-cd gerenciador-produtos-java
-Compile as classes:javac -d bin src/model/*.java src/service/*.java src/Main.java
-Execute a aplicação:java -cp bin Main
-📊 Exemplo do Arquivo Gerado (produtos.csv)Após selecionar a opção de exportar no menu, o arquivo produtos.csv será criado com a seguinte estrutura:Nome;Preco;Marca;Estoque Disponivel
+│   │   └── GerenciadorProdutos.java # Regras de negócio (adicionar, listar, remover e exportar)
+│   └── Main.java                    # Menu interativo via terminal
+└── produtos.csv                     # Arquivo gerado automaticamente após a exportação
+```
+
+---
+
+## 🖥️ Como Executar o Projeto
+
+### Pré-requisitos
+- Java Development Kit (JDK) 17 ou superior instalado.
+- IDE de sua preferência (Eclipse, VS Code, IntelliJ) ou Terminal.
+
+### Passo a Passo
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/gerenciador-produtos.git
+   ```
+
+2. **Navegue até o diretório do projeto:**
+   ```bash
+   cd gerenciador-produtos
+   ```
+
+3. **Execute a aplicação:**
+   - Se estiver usando uma IDE (como **Eclipse** ou **VS Code**), abra a pasta do projeto e execute o arquivo `Main.java`.
+   - Se preferir o **Terminal**:
+     ```bash
+     javac -d bin src/model/*.java src/service/*.java src/Main.java
+     java -cp bin Main
+     ```
+
+---
+
+## 📊 Exemplo de Arquivo CSV Gerado (`produtos.csv`)
+
+Ao selecionar a opção de exportação no menu, o programa salva o arquivo no seguinte formato:
+
+```csv
+Nome;Preco;Marca;Estoque Disponivel
 TV, Oled 54';3000,00;Samsung;Sim
-Mouse Sem Fio;150,50;Logitech;Não
-📑 Conceitos de Programação AplicadosEncapsulamento: Atributos privados na classe Produto acessados via getters.Tratamento de Exceções: Uso de blocos try-with-resources para fechamento automático de streams I/O (BufferedWriter).Formatação de Dados: Utilização de String.format() para padronizar valores monetários e saídas CSV.📝 LicençaEste projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.Desenvolvido por [Seu Nome] 👋🏼 Meu LinkedIn
+Monitor Gamer 27';1450,50;LG;Não
+```
+
+---
+
+## ✒️ Autor
+
+Desenvolvido por Luiz Felipe Andrade como parte da evolução dos estudos de programação Java.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([[https://linkedin.com/in/seu-perfil](https://www.linkedin.com/in/lfandrade/?isSelfProfile=true)](https://www.linkedin.com/in/lfandrade/?isSelfProfile=true))
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]([https://github.com/seu-usuario](https://github.com/luizfelipeandrade))
